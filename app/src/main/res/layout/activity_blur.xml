@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlurActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fruit" />
+
+        <TextView
+            android:id="@+id/filters_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Blur Amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_blur_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radio_blur_lv_1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_blur_lv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A Little Blurred" />
+
+            <RadioButton
+                android:id="@+id/radio_blur_lv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More Blurred" />
+
+            <RadioButton
+                android:id="@+id/radio_blur_lv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Most Blurred" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/destinations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/go_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
